@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 
 const validate = (req, res, next) => {
     const {name, email, phone, birthday, message} = req.body;
-    if (!(name && email && phone && birthday && message)) {
+    if ((name && email && phone && birthday && message)) {
         res.status(400).json({
             status: 'error',
             message: 'First and Last name, email, phone, birthday and message cannot be empty'
@@ -21,7 +21,7 @@ const validate = (req, res, next) => {
     next()
 }
 
-app.post('/', validate, (req, res) => {
+app.post('https://seobilityback.herokuapp.com/', validate, (req, res) => {
     res.status(200).json({
         status: 'success',
         message: 'Success data send'
