@@ -20,6 +20,13 @@ const validate = (req, res, next) => {
     next()
 }
 
+app.get('/', (req, res) => {
+    res.status(200).json({
+        status: 'success',
+        message: 'Success data load'
+    });
+});
+
 app.post('/', validate, (req, res) => {
     res.status(200).json({
         status: 'success',
