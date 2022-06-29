@@ -1,7 +1,7 @@
-import express from 'express'
-import cors from 'cors'
-import bodyParser from 'body-parser'
 const http = require('http')
+const express = require('express')
+const cors = require('cors')
+const bodyParser = require('body-parser')
 
 setInterval(function() {
     http.get('https://seobilityback.herokuapp.com/');
