@@ -1,6 +1,12 @@
 import express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser'
+const http = require('http')
+
+setInterval(function() {
+    http.get('https://seobilityback.herokuapp.com/');
+}, 300000);
+
 
 const PORT = process.env.PORT || 5005;
 const app = express()
