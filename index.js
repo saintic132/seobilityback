@@ -7,7 +7,6 @@ setInterval(function() {
     http.get('http://seobilityback.herokuapp.com/');
 }, 300000);
 
-
 const PORT = process.env.PORT || 5005;
 const app = express()
 
