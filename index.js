@@ -4,7 +4,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 
 setInterval(function() {
-    http.get('https://seobilityback.herokuapp.com/');
+    http.get('http://seobilityback.herokuapp.com/');
 }, 300000);
 
 
